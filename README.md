@@ -56,5 +56,5 @@ Acesse a aplicação em http://127.0.0.1:8000/.
 * Python 🐍
 * Django 🏗️
 * SQLite
-* HTML, CSS e JavaScript para o frontend
+* Bootstrap CSS e JavaScript para o frontend
 
