@@ -2,10 +2,13 @@
     "builds": [
       {
         "src": "smoothflow/wsgi.py",
-        "use": "@vercel/python",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "build_static.sh",
+        "use": "@vercel/static-build",
         "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.12"
+          "distDir": "staticfiles"
         }
       }
     ],
@@ -18,14 +21,5 @@
         "src": "/(.*)",
         "dest": "smoothflow/wsgi.py"
       }
-    ],
-    "build": {
-      "env": {
-        "DJANGO_SETTINGS_MODULE": "smoothflow.settings.production"
-      },
-      "commands": [
-        "python manage.py collectstatic --noinput"
-      ]
-    }
+    ]
   }
-  
