@@ -30,5 +30,5 @@ urlpatterns = [
     path('dashboard/mudastatus/<int:id>', mudaStatus, name='mudaStatusPerfil'),
     path('dashboard/deleta/<int:id>', delTarefa, name='delTarefaPerfil'),
     path('auth/', include('usuarios.urls')),
-    path('', index, name='index')
+    path('', index, name='index'),
 ]
